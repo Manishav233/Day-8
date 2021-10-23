@@ -24,53 +24,34 @@ console.log(a); // return movies with PG rating
 
 2. 
 
-class Circle{
-  var radius=1.0;
-  var color="red";
 
-
-Constructor Circle(){
-  
-}
-
-Constructor Circle(radius)
-{
-  this.radius=radius;
-}
-Constructor Circle(radius,color){
-  this.radius=radius;
-  this.color=color;
-}
-getRadius(){
-  return radius;
+class Circle {
+  constructor(radius, color) {
+    this.radius = radius;
+    this.color = color;
+  }
+  getCircumference() {
+    let res = 2 * Math.PI * this.radius;
+    return res;
+  }
+  getArea() {
+    return Math.PI * Math.pow(this.radius, 2);
+  }
 }
 
-this.setRadius=function(radius){
-  this.radius=radius;
-}
+let circle1 = new Circle(2, "red");
+let circle2 = new Circle(5, "yellow");
+let circle3 = new Circle(10, "black");
+console.log(circle3.getCircumference());
+console.log(circle1.radius);
+console.log(circle2.getArea());
 
-getColor(){
-  return color;
-}
-this.setColor=function(color){
-  this.color=color;
-}
-this.toString=function(){
-return ["Circle has radius of"+this.radius +"with color"+this.color];
-  
-}
-getArea(){
-  return area;
-}
-getCircumference(){
-  return circumference;
-}
-}
 
-const c1=new Circle(2.0,"pink");
-const c2=new Circle();
-const c3=new Circle(3.0,"black");
-console.log(c1.getRadius());
+output:
+
+62.83185307179586
+2
+78.53981633974483
 
 
 3. Write a “person” class to hold all the details.
